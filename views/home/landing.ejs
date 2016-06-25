@@ -11,15 +11,15 @@
 	    	<div class='stat'>
 		    	<img src='/images/icon/slack.png' class='icon'/>
 		    	<h3>Comunicate!</h3>
-		    	<p>Sumate al canal de <strong>Slack!</strong><br>
-		    	Y mantenete siempre actualizado.</p>
+		    	<p>Sumáte al canal de <strong>Slack!</strong><br>
+		    	Y mantenéte siempre actualizado.</p>
 	    	</div>
 	    </div>
 	    <div class="col-sm-4">
 	    	<div class='stat'>
 		    	<img src='/images/icon/beer.png' class='icon'/>
-		    	<h3>Divertite!</h3>
-		    	<p>Conocé gente de tu palo y pasala bien compartiendo una cerveza mientras charlas de Data Science.</p>
+		    	<h3>Divertíte!</h3>
+		    	<p>Conocé gente de tu palo y paséla bien compartiendo una cerveza mientras charlás de Data Science.</p>
 	    	</div>
 	    </div>
 	    <div class="col-sm-4">
@@ -50,7 +50,7 @@ if (screen && screen.width > 768) {
   document.write('<script src="/javascripts/triangles.js"><\/script>');
 }
 
-	
+
 $('.sumate').on('click',function(){
 	notie.input({
 		type: 'email',
@@ -63,13 +63,13 @@ $('.sumate').on('click',function(){
             	if(data.status !== 200){
             		notie.alert(2, data.message, 2);
             	}else{
-            		notie.alert(1, 'Ya estás suscripto a nuestro mailing list! Gracias!', 2); 
+            		notie.alert(1, 'Ya estás suscripto a nuestro mailing list! Gracias!', 2);
             	}
             })
         } else {
-        	notie.alert(2, 'El mail que ingresaste no es válido.');    
+        	notie.alert(2, 'El mail que ingresaste no es válido.');
         }
-        
+
 
     });
 
