@@ -1,0 +1,158 @@
+body {
+	padding: 50px;
+	font: 16px 'Palanquin', sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.icon{
+	display: block;
+	margin: 4px auto;
+}
+
+.navigation {
+	left: 0;
+	max-width: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+	max-width: 100vw;
+	z-index: 99;
+}
+/* Re-overiding the width 100% declaration to match size of% based container */
+.navigation .container {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.navigation {
+	background: rgba(0,0,0,.2);
+	display: block;
+	height: 5.2rem;
+	width: 100%;
+}
+.navigation-list {
+	list-style: none;
+	margin-bottom: 0;
+	margin-right: 5.0rem;
+}
+@media (min-width: 80.0rem) {
+	.navigation-list {
+		margin-right: 0;
+	}
+}
+
+.navigation i {
+    position: relative;
+    top: 0.15rem;
+    font-size: 1.72rem;
+    padding-right: 0.4rem;
+}
+.navigation .title,
+.navigation-title {
+	color: white;
+	display: inline;
+	font-family: 'Kanit', sans-serif;
+	line-height: 5.2rem;
+	font-size: 1.6rem;
+	padding: 0;
+	position: relative;
+	text-decoration: none;
+}
+.navigation-link {
+    display: inline;
+    line-height: 5.2rem;
+    font-size: 1.6rem;
+    padding: 0px 18px;
+    text-decoration: none;
+    color: white;
+}
+.navigation-link.active {
+	color: #0085FF;
+}
+
+.button:hover, .button:focus, button:hover, button:focus, input[type='button']:hover, input[type='button']:focus, input[type='reset']:hover, input[type='reset']:focus, input[type='submit']:hover, input[type='submit']:focus {
+    background-color: #2196f3;
+    border-color: rgba(96, 108, 118, 0);
+    color: #fff;
+    outline: 0;
+}
+
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+    background-color: #00B7FF;
+    border: .1rem solid #00B7FF;
+    border-radius: .4rem;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    height: 3.8rem;
+    letter-spacing: .1rem;
+    line-height: 3.8rem;
+    padding: 0 3rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+
+.stat {
+    cursor: default;
+    background: rgba(0,0,0,.2);
+    color:#f4f5f6;
+    min-height: 166px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 5px;
+}
+
+div.stat:hover {
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.5);
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+
+
+.portada {
+    padding: 8em 0;
+    text-align: center;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),0px 8px 13px rgba(0,0,0,0.1),0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.portada h1{
+    margin: 0 auto .125em;
+    font-size: 4em;
+    font-family: 'Kanit', sans-serif;
+    line-height: 1;
+    max-width: 8em;
+    width: 100%;
+    color: #f4f5f6;
+}
+
+.portada h2{
+	color: #d1d1d1;
+}
+
+
+
+.overlay {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+#triangles {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
