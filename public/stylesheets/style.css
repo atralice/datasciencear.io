@@ -1,15 +1,31 @@
 body {
 	padding: 50px;
 	font: 16px 'Palanquin', sans-serif;
+  height: 100vh;
+  width: 100vw;
 }
 
 a {
   color: #00B7FF;
+  text-decoration: none !important;
 }
 
 .icon{
 	display: block;
 	margin: 4px auto;
+}
+
+.celeste{
+  color:#74acdf;
+}
+
+.title:hover .sol{
+  color:#f6b40e;
+}
+
+.navigation-title:hover{
+  background-color: rgba(0,0,0,.6);
+  
 }
 
 .navigation {
