@@ -1,35 +1,38 @@
 
 
-<div class="container">
+<div class='landing'>
 	<div class="row">
-
-		<div class="portada">
+		<div class="portada col-sm-12">
             <h1>El lugar para el DS Porteño</h1>
             <h2>En la comunidad vamos a aprender, conectarnos y jugar con datos.</h2>
         </div>
-	    <div class="col-sm-4">
-	    	<div class='stat'>
-		    	<img src='/images/icon/slack.png' class='icon'/>
-		    	<h3>Comunicate!</h3>
-		    	<p>Sumáte al canal de <strong>Slack!</strong><br>
-		    	Y mantenéte siempre actualizado.</p>
-	    	</div>
-	    </div>
-	    <div class="col-sm-4">
-	    	<div class='stat'>
-		    	<img src='/images/icon/beer.png' class='icon'/>
-		    	<h3>Divertíte!</h3>
-		    	<p>Conocé gente de tu palo y paséla bien compartiendo una cerveza mientras charlás de Data Science.</p>
-	    	</div>
-	    </div>
-	    <div class="col-sm-4">
-	    	<div class='stat'>
-		    	<img src='/images/icon/poll.png' class='icon'/>
-		    	<h3>Compartí!</h3>
-		    	<p>Participá de la encuesta de sueldos de Data Scientists.<br>
-		    	Sumá tu dataset para que lo analicemos entre todos!</p>
-	    	</div>
-	    </div>
+        <div class="fit col-sm-12">
+        	<div class="row parent">
+			    <div class="col-sm-4 ">
+			    	<div class='stat'>
+				    	<img src='/images/icon/slack.png' class='icon'/>
+				    	<h3>Comunicate!</h3>
+				    	<p>Sumáte al canal de <strong>Slack!</strong><br>
+				    	Y mantenéte siempre actualizado.</p>
+			    	</div>
+			    </div>
+			    <div class="col-sm-4">
+			    	<div class='stat'>
+				    	<img src='/images/icon/beer.png' class='icon'/>
+				    	<h3>Divertíte!</h3>
+				    	<p>Conocé gente de tu palo y paséla bien compartiendo una cerveza mientras charlás de Data Science.</p>
+			    	</div>
+			    </div>
+			    <div class="col-sm-4">
+			    	<div class='stat'>
+				    	<img src='/images/icon/poll.png' class='icon'/>
+				    	<h3>Compartí!</h3>
+				    	<p>Participá de la encuesta de sueldos de Data Scientists.<br>
+				    	Sumá tu dataset para que lo analicemos entre todos!</p>
+			    	</div>
+			    </div>
+			</div>
+		</div>
   	</div>
 </div>
 
@@ -73,6 +76,12 @@ $('.sumate').on('click',function(){
 
     });
 
+});
+
+
+
+$(window).resize( function(){
+  $("#triangles").width( $('html').width() ).height( $('html').height() );
 });
 
 </script>

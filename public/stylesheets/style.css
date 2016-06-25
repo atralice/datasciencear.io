@@ -1,8 +1,18 @@
-body {
-	padding: 50px;
-	font: 16px 'Palanquin', sans-serif;
+html{
   height: 100vh;
-  width: 100vw;
+}
+
+body {
+	font: 16px 'Palanquin', sans-serif;
+}
+
+.landing{
+  width: 75%;
+  margin: 0 auto;
+}
+
+.fit{
+  margin-bottom: 40px;
 }
 
 a {
@@ -19,14 +29,10 @@ a {
   color:#74acdf;
 }
 
-.title:hover .sol{
+.navigation:hover .sol{
   color:#f6b40e;
 }
 
-.navigation-title:hover{
-  background-color: rgba(0,0,0,.6);
-  
-}
 
 .navigation {
 	left: 0;
@@ -42,6 +48,12 @@ a {
 	padding-top: 0;
 	padding-bottom: 0;
 }
+
+.navigation:hover{
+  background-color: rgba(0,0,0,.6);
+  
+}
+
 .navigation {
 	background: rgba(0,0,0,.2);
 	display: block;
@@ -116,6 +128,7 @@ a {
 
 
 .stat {
+    height: 100%;
     cursor: default;
     background: rgba(0,0,0,.2);
     color:#f4f5f6;
