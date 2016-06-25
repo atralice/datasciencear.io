@@ -7,37 +7,72 @@
             <h1>El lugar para el DS Porteño</h1>
             <h2>En la comunidad vamos a aprender, conectarnos y jugar con datos.</h2>
         </div>
-	    <div class="col-md-4">
+	    <div class="col-sm-4">
 	    	<div class='stat'>
 		    	<img src='/images/icon/slack.png' class='icon'/>
 		    	<h3>Comunicate!</h3>
-		    	<p>Sumate al canal de <strong>Slack!</strong>
+		    	<p>Sumate al canal de <strong>Slack!</strong><br>
+		    	Y mantenete siempre actualizado.</p>
 	    	</div>
 	    </div>
-	    <div class="col-md-4">
+	    <div class="col-sm-4">
 	    	<div class='stat'>
 		    	<img src='/images/icon/beer.png' class='icon'/>
-		    	<h3>Compartí</h3>
-		    	<p>Sumá tu data set para que lo analicemos entre todos!</p>
+		    	<h3>Divertite!</h3>
+		    	<p>Conocé gente de tu palo y pasala bien compartiendo una cerveza mientras charlas de Data Science.</p>
 	    	</div>
 	    </div>
-	    <div class="col-md-4">
+	    <div class="col-sm-4">
 	    	<div class='stat'>
 		    	<img src='/images/icon/poll.png' class='icon'/>
-		    	<h3>Aprendé!</h3>
-		    	<p>Participá de la encuesta de sueldos de Data Scientists</p>
+		    	<h3>Compartí!</h3>
+		    	<p>Participá de la encuesta de sueldos de Data Scientists.<br>
+		    	Sumá tu dataset para que lo analicemos entre todos!</p>
 	    	</div>
 	    </div>
   	</div>
 </div>
 
-<div id="triangles">
+<div id="triangles" class='hidden-xs'>
   <div id="output">
   </div>
+  <img src='/images/background/backMobile.png' class='mobile visible-xs-*'/>
 
 
 </div>
 
 
 
-<script src='/javascripts/triangles.js'></script>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+<script>
+
+if (screen && screen.width > 768) {
+  document.write('<script src="/javascripts/triangles.js"><\/script>');
+}
+
+	
+$('.sumate').on('click',function(){
+	notie.input({
+		type: 'email',
+		placeholder: 'name@example.com',
+		prefilledValue: ''
+	}, 'Ingresá tu dirección de email: <p class="info">Te vamos a suscribir a nuestra mailing list y agregar al canal de Slack!</p>', 'Enviar', 'Cancelar', function(valueEntered) {
+		filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(filter.test(valueEntered)) {
+            $.post('/mail/suscribe/'+valueEntered, function(data){
+            	if(data.status !== 200){
+            		notie.alert(2, data.message, 2);
+            	}else{
+            		notie.alert(1, 'Ya estás suscripto a nuestro mailing list! Gracias!', 2); 
+            	}
+            })
+        } else {
+        	notie.alert(2, 'El mail que ingresaste no es válido.');    
+        }
+        
+
+    });
+
+});
+
+</script>
