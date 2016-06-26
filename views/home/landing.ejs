@@ -3,7 +3,7 @@
 <div class='container' id='landing'>
 	<!-- <div class="row"> -->
 		<div class="portada row">
-            <h1>El lugar para el DS Porteño</h1>
+            <h1>Democratizando la Ciencia de Datos</h1>
             <h2>En la comunidad vamos a aprender, conectarnos y jugar con datos.</h2>
         </div>
         <div class="fit  row">
@@ -20,7 +20,7 @@
 			    	<div class='stat'>
 				    	<img src='/images/icon/beer.png' class='icon'/>
 				    	<h3>Divertíte!</h3>
-				    	<p>Conocé gente de tu palo y paséla bien compartiendo una cerveza mientras charlás de Data Science.</p>
+				    	<p>Conocé gente de tu palo y pasala bien compartiendo una cerveza mientras charlás de Data Science.</p>
 			    	</div>
 			    </div>
 			    <div class="col-sm-4">
@@ -41,55 +41,29 @@
   </div>
   <img src='/images/background/backMobile.png' class='mobile visible-xs-*'/>
 
-
 </div>
 
-
-
-<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
 <script>
-
+var fondo = false;
 if (screen && screen.width > 768) {
   document.write('<script src="/javascripts/triangles.js"><\/script>');
 }
 
 
 
-
-$('.sumate').on('click',function(){
-	notie.input({
-		type: 'email',
-		placeholder: 'name@example.com',
-		prefilledValue: ''
-	}, 'Ingresá tu dirección de email: <p class="info">Te vamos a suscribir a nuestra mailing list y agregar al canal de Slack!</p>', 'Enviar', 'Cancelar', function(valueEntered) {
-		filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-		if(filter.test(valueEntered)) {
-            $.post('/mail/suscribe/'+valueEntered, function(data){
-            	if(data.status !== 200){
-            		notie.alert(2, data.message, 2);
-            	}else{
-            		notie.alert(1, 'Ya estás suscripto a nuestro mailing list! Gracias!', 2);
-            	}
-            })
-        } else {
-        	notie.alert(2, 'El mail que ingresaste no es válido.');
-        }
-
-
-    });
-
-});
-
-
-
 $(window).resize( function(){
   $("#triangles").width( $('body').width() ).height( $('body').height() );
+  if (screen && screen.width > 768 && !fondo) {
+   	$.getScript('/javascripts/triangles.js').done(function(){triangles();});
+   }
 });
 
 window.onload = function() {
   // Run code
-  $("#triangles").width( $('body').width() ).height( $('body').height() );
-  triangles();
+  if (screen && screen.width > 768 ) {
+	  $("#triangles").width( $('body').width() ).height( $('body').height() );
+	  triangles();
+  }
 };
 
 </script>

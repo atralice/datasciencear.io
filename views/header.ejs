@@ -7,8 +7,38 @@
 		</a>
 		<div class='navigation-list pull-right'>
 			
-			<a class="navigation-link" href="/contacto"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+			<a class="navigation-link" href="/aboutus"><i class="fa fa-users" aria-hidden="true"></i></a>
+			
 			<a class="button sumate" href="#"><i class="fa fa-hashtag" aria-hidden="true"></i>Sumate</a>
 		</div>
 	</section>
 </nav>
+
+<script>
+
+
+$('.sumate').on('click',function(){
+	notie.input({
+		type: 'email',
+		placeholder: 'name@example.com',
+		prefilledValue: ''
+	}, 'Ingresá tu dirección de email: <p class="info">Te vamos a suscribir a nuestra mailing list y agregar al canal de Slack!</p>', 'Enviar', 'Cancelar', function(valueEntered) {
+		filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(filter.test(valueEntered)) {
+            $.post('/mail/suscribe/'+valueEntered, function(data){
+            	if(data.status !== 200){
+            		notie.alert(2, data.message, 2);
+            	}else{
+            		notie.alert(1, 'Ya estás suscripto a nuestro mailing list! Gracias!', 2);
+            	}
+            })
+        } else {
+        	notie.alert(2, 'El mail que ingresaste no es válido.');
+        }
+
+
+    });
+
+});
+
+</script>

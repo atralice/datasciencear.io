@@ -25,6 +25,7 @@ SOFTWARE.
 **/
 var Delaunay;
 var triangles = function(){
+  fondo =true;
 (function() {
   "use strict";
 

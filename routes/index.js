@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Data Science Ar', pagina: 'home/landing' });
 });
 
+router.get('/aboutus', function(req, res, next) {
+  res.render('index', { title: 'Nosotros', pagina: 'home/aboutus' });
+});
+
 module.exports = router;
