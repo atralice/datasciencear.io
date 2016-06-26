@@ -1,12 +1,12 @@
 
 
-<div class='landing'>
-	<div class="row">
-		<div class="portada col-sm-12">
+<div class='container' id='landing'>
+	<!-- <div class="row"> -->
+		<div class="portada row">
             <h1>El lugar para el DS Porteño</h1>
             <h2>En la comunidad vamos a aprender, conectarnos y jugar con datos.</h2>
         </div>
-        <div class="fit col-sm-12">
+        <div class="fit  row">
         	<div class="row parent">
 			    <div class="col-sm-4 ">
 			    	<div class='stat'>
@@ -33,7 +33,7 @@
 			    </div>
 			</div>
 		</div>
-  	</div>
+  	<!-- </div> -->
 </div>
 
 <div id="triangles" class='hidden-xs'>
@@ -52,6 +52,8 @@
 if (screen && screen.width > 768) {
   document.write('<script src="/javascripts/triangles.js"><\/script>');
 }
+
+
 
 
 $('.sumate').on('click',function(){
@@ -81,7 +83,13 @@ $('.sumate').on('click',function(){
 
 
 $(window).resize( function(){
-  $("#triangles").width( $('html').width() ).height( $('html').height() );
+  $("#triangles").width( $('body').width() ).height( $('body').height() );
 });
+
+window.onload = function() {
+  // Run code
+  $("#triangles").width( $('body').width() ).height( $('body').height() );
+  triangles();
+};
 
 </script>

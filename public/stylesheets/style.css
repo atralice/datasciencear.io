@@ -1,18 +1,35 @@
 html{
-  height: 100vh;
+
 }
 
 body {
 	font: 16px 'Palanquin', sans-serif;
+  min-height: 100vh;
+
 }
 
-.landing{
+#triangles {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+   position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+}
+
+#landing{
   width: 75%;
   margin: 0 auto;
 }
 
 .fit{
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 a {
@@ -167,24 +184,7 @@ div.stat:hover {
 
 
 
-.overlay {
-  pointer-events: none;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-}
 
-#triangles {
-  position: absolute;
-  top:0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
 
 .info{
     font-size: 20px;

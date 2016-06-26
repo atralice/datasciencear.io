@@ -24,7 +24,7 @@ SOFTWARE.
 
 **/
 var Delaunay;
-
+var triangles = function(){
 (function() {
   "use strict";
 
@@ -3877,7 +3877,8 @@ dat.GUI = dat.gui.GUI = function(e, a, c, d, f, b, n, h, j, m, l, o, y, g, i) {
   // Global Properties
   //------------------------------
   var center = FSS.Vector3.create();
-  var container = document.getElementById('triangles');
+   var container = document.getElementById('triangles');
+  // var container = window.document.body;
   var controls = document.getElementById('controls');
   var output = document.getElementById('output');
   var renderer, scene, mesh, geometry, material;
@@ -4130,6 +4131,7 @@ dat.GUI = dat.gui.GUI = function(e, a, c, d, f, b, n, h, j, m, l, o, y, g, i) {
   //------------------------------
 
   function onWindowResize(event) {
+    console.log('hola');
     resize(container.offsetWidth, container.offsetHeight);
     render();
   }
@@ -4162,3 +4164,4 @@ dat.GUI = dat.gui.GUI = function(e, a, c, d, f, b, n, h, j, m, l, o, y, g, i) {
   initialise();
 
 })();
+}
