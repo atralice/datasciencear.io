@@ -55,7 +55,7 @@
   padding: 20px;
   display: block;
   cursor: default;
-  background-color: #00B7FF; }
+  background-color: rgba(0, 0, 0, 0.88); }
 
 #notie-confirm-text {
   color: #FFFFFF; }

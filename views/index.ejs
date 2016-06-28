@@ -7,5 +7,20 @@
   	<% include header %>
      <%- include(pagina) %>
     <% include credits %>
+
+    <script>
+  		$('#about').on('click', function(){
+  			ga('send', 'event', 'Link', 'About');
+  		});
+
+  		$('#encuesta').on('click', function(){
+  			ga('send', 'event', 'Link', 'Encuesta');
+  		});
+
+  		$('#plataforma').on('click', function(){
+  			ga('send', 'event', 'Link', 'Plataforma 5');
+  		});
+
+	</script>
   </body>
 </html>

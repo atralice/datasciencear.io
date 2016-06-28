@@ -10,7 +10,7 @@
         	<div class="row parent">
 			    <div class="col-sm-4 ">
 			    	<div class='stat'>
-				    	<img src='/images/icon/slack.png' class='icon'/>
+				    	<img src='/images/icon/slack.png' class='icon' alt='icon' />
 				    	<h3>Comunicáte!</h3>
 				    	<p>Sumáte al canal de <strong>Slack!</strong><br>
 				    	Y mantenéte siempre actualizado.</p>
@@ -18,16 +18,16 @@
 			    </div>
 			    <div class="col-sm-4">
 			    	<div class='stat'>
-				    	<img src='/images/icon/beer.png' class='icon'/>
+				    	<img src='/images/icon/beer.png' class='icon' alt='icon'/>
 				    	<h3>Divertíte!</h3>
 				    	<p>Conocé gente de tu palo y pasála bien compartiendo una cerveza mientras charlás de Data Science.</p>
 			    	</div>
 			    </div>
 			    <div class="col-sm-4">
 			    	<div class='stat'>
-				    	<img src='/images/icon/poll.png' class='icon'/>
+				    	<img src='/images/icon/poll.png' class='icon' alt='icon'/>
 				    	<h3>Compartí!</h3>
-				    	<p>Participá de la encuesta de sueldos de Data Scientists.<br>
+				    	<p>Participá de la <a href='http://goo.gl/forms/ospSIZ4OBJhniLfp1' id='encuesta' target='_blank'><strong>encuesta</strong></a> de sueldos de Data Scientists.<br>
 				    	Sumá tu dataset para que lo analicemos entre todos!</p>
 			    	</div>
 			    </div>
@@ -39,7 +39,7 @@
 <div id="triangles" class='hidden-xs'>
   <div id="output">
   </div>
-  <img src='/images/background/backMobile.png' class='mobile visible-xs-*'/>
+  <img src='/images/background/backMobile.png' class='mobile visible-xs-*' alt='background'/>
 
 </div>
 
@@ -48,8 +48,6 @@ var fondo = false;
 if (screen && screen.width > 768) {
   document.write('<script src="/javascripts/triangles.js"><\/script>');
 }
-
-
 
 $(window).resize( function(){
   $("#triangles").width( $('body').width() ).height( $('body').height() );
