@@ -21,6 +21,35 @@
   			ga('send', 'event', 'Link', 'Plataforma 5');
   		});
 
+      
+$('.sumate').on('click',function(){
+  notie.input({
+    type: 'email',
+    placeholder: 'name@example.com',
+    prefilledValue: ''
+  }, '<p class="info"> Ingresá tu dirección de email para suscribirte a nuestra mailing list y entrar al canal de Slack!</p>', 'Enviar', 'Cancelar', function(valueEntered) {
+    filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if(filter.test(valueEntered)) {
+            $.post('/mail/suscribe/'+valueEntered, function(data){
+              if(data.status !== 200){
+                notie.alert(2, data.message, 2);
+                ga('send', 'event', 'Sumate', 'Error', data.message);
+              }else{
+                notie.alert(1, 'Ya estás suscripto a nuestro mailing list! Gracias!', 2);
+                ga('send', 'event', 'Sumate', 'Suscripcion', 'goal');
+              }
+            })
+        } else {
+          notie.alert(2, 'El mail que ingresaste no es válido.');
+          ga('send', 'event', 'Sumate', 'Bad mail');
+        }
+    }, function(){
+      //canceló
+      ga('send', 'event', 'Sumate', 'Cancelo');
+    });
+
+});
+
 	</script>
   </body>
 </html>
