@@ -4132,7 +4132,6 @@ dat.GUI = dat.gui.GUI = function(e, a, c, d, f, b, n, h, j, m, l, o, y, g, i) {
   //------------------------------
 
   function onWindowResize(event) {
-    console.log('hola');
     resize(container.offsetWidth, container.offsetHeight);
     render();
   }
