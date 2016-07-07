@@ -10,4 +10,9 @@ router.get('/aboutus', function(req, res, next) {
   res.render('index', { title: 'Nosotros', pagina: 'home/aboutus' });
 });
 
+router.get('/google211f06e19dfca187.html', function(req, res, next) {
+  res.render('home/verification');
+});
+
+
 module.exports = router;
