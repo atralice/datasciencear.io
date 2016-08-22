@@ -161,6 +161,16 @@ a:hover, a:focus {
     border-radius: 10px;
 }
 
+.stat:hover{
+  background: rgba(0,0,0,.5);
+}
+
+#analisis{
+  cursor: pointer;
+
+}
+
+
 
 .portada {
     padding: 6em 0;
